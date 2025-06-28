@@ -2,15 +2,15 @@
 # Conditional build:
 %bcond_with	tests	# pytest tests [use ptys, so not on builders]
 %bcond_without	python2 # CPython 2.x module
-%bcond_without	python3 # CPython 3.x module
+%bcond_with	python3 # CPython 3.x module (built from python3-pytest-timeout.spec)
 
 %define 	module	pytest-timeout
-Summary:	py.test plugin to abort hanging tests
-Summary(pl.UTF-8):	Wtyczka py.test do przerywania zawieszonych testów
+Summary:	pytest plugin to abort hanging tests
+Summary(pl.UTF-8):	Wtyczka pytesta do przerywania zawieszonych testów
 Name:		python-%{module}
 # keep 1.x here for python2/pytest<5 support
 Version:	1.4.2
-Release:	7
+Release:	8
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/pytest-timeout/
